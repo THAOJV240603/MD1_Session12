@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số ký tự</title>
+</head>
+<body>
+    <script>
+    var str = prompt("Nhập chuỗi:");
+
+        function count(chuoi) {
+            var arr = chuoi.split(" ");
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += arr[i].length;
+            };
+            return sum;
+        }
+
+        var dem = count(str);
+        document.write(str.split(" ") + "<br/>");
+        document.write(" Số phần tử là: " + dem);
+    </script>
+</body>
+</html>

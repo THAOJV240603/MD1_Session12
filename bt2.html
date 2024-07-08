@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm phần tử dài nhất</title>
+</head>
+<body>
+    <script>
+        var array = ["Hà Nội", "Việt Nam", "Quảng Bình", "Hải Phòng"];
+
+        function findLongestWord (a) 
+        {
+            var str = a[0].length;
+            var maxLength = a[0];
+            for (var i = 0; i < a.length; i++) 
+            {
+                if (str < a[i].length) 
+                {
+                    str = a[i].length;
+                    maxLength = a[i];
+                }
+            }
+                return maxLength;
+        }
+
+        document.write(array + "<br/>");
+        var result = findLongestWord (array);
+        document.write(`Phần tử dài nhất là  ${result}`)
+    </script>
+</body>
+</html>

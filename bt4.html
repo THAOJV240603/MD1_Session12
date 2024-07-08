@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số lần xuất hiện</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Nhập chuỗi");
+        var chara = prompt("Nhập ký tự");
+
+        function KiemTra(string, char) {
+            var a = string.split('');
+            var count = 0;
+            for (var i = 0; i < a.length; i++) {
+                if (char == a[i]) {
+                    count++;
+                }
+            }
+            document.write(str + "<br/>");            
+            document.write(` ${char} xuất hiện ${count} lần`)
+        }
+
+        KiemTra(str,chara);
+    </script>
+</body>
+</html>

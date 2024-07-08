@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hoa chữ cái đầu</title>
+</head>
+<body>
+    <script>
+        var string = "việt nam đẹp nhất có tên bác hồ";
+
+        function titleCase(string)
+        {
+            let lowerCaseString = string.toLowerCase(); //Đưa về hết chữ thường
+            let splitString = lowerCaseString.split(" "); //Đưa về mảng
+            let titleCaseArray = splitString.map((word) => {return word[0].toUpperCase() + word.slice(1)}); //biển đổi array thành viết hoa với ký tự đầu tiên
+            let titleCaseSentence = titleCaseArray.join(" "); // Nối lại với nhau
+            return titleCaseSentence;
+        }
+        
+        document.write(string + "<br/>"); 
+        document.write(titleCase(string));    
+    </script>
+</body>
+</html>
